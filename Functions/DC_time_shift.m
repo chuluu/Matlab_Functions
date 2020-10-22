@@ -1,4 +1,13 @@
 function [Cxy_order,t_new] = DC_time_shift(Cxy,fs)
+% [Cxy_order,t_new] = DC_time_shift(Cxy,fs)
+% Inputs:
+% Cxy = Cross correlation without time shift
+% fs  = sampling rate
+% Outputs: 
+% Cxy_order = Re-ordered cross correlation
+% t_new     = time shifted time
+
+% Begin Code:
     dt = 1/fs;
     N  = length(Cxy);
     if rem(N,2) == 0

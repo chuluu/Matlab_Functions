@@ -1,4 +1,5 @@
-function processed_wav = equalize_and_reverb(inwavfilename, EQdBsettings, Dk_delays_msec, alphak_gains, outwavfilename);
+function processed_wav = equalize_and_reverb(inwavfilename, EQdBsettings, Dk_delays_msec, alphak_gains, outwavfilename)
+% processed_wav = equalize_and_reverb(inwavfilename, EQdBsettings, Dk_delays_msec, alphak_gains, outwavfilename);
 %Inputs: 
 %inwavfilename = name of wavefile needed to be equalized and reverbed
 %EQdBsettings = array of Decibal level for each frequency range in of [62.5, 125, 250, 500, 1e3, 2e3, 4e3, 8e3, 16e3]

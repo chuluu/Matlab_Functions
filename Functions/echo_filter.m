@@ -1,4 +1,5 @@
 function [echo_filter_hn] = echo_filter(Dk_delays_msec,alphak_gains,fs)
+%[echo_filter_hn] = echo_filter(Dk_delays_msec,alphak_gains,fs)
 %Inputs: 
 %Dk_delays_msec = array of delay points in msec
 %alphak_gains = gain at each delay point
