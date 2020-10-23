@@ -1,17 +1,16 @@
 function [Cxy,t] = NormCrossCorrelate(xn, yn, fs)
 % Convolvles 2 signals together using FFT algorithm
-%Inputs:
-%x:    Data Array of first time domain signal
-%h:    Data Array of second time domain signal
-%fs:   Sampling rate
-%figure_num:   label figures generated
-%Outputs:
-%y:    Convolved time domain signal
-%t:    Time samples based off of sampling rate
-%Figure Outputs:
-%figure_num: time domain plots of x,h, and y
-%figure_num + 1:  Digital Frequency Spectrum of X, H, and Y
-%figure_num + 2:  Analog frequency Spectrum of X, H, and Y
+% Inputs:
+% x:    Data Array of first time domain signal
+% yn:   Data Array of second time domain signal
+% fs:   Sampling rate
+% Outputs:
+% Cxy:  Normalized cross correlation
+% t:    Time samples based off of sampling rate
+% By: Matthew Luu
+% Last Edit: 9/18/20
+% Normalized cross correlation linear cross cor
+
 
 %Set up length of FFT to zero pad such that we get an even signal
 %throughout

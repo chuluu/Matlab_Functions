@@ -11,7 +11,11 @@ function [Gxx_array,dB_vals,t_array_big,f_array_big] = MYSpectrogram(...
 % dB_vals     = dB_vals of Gxx_array
 % t_array_big = time array for spectrogram
 % f_array_big = frequency array for spectrogram
+% By: Matthew Luu
+% Last Edit: 9/18/20
+% My version on plotting the spectrogram of a signal
 
+% Begin Code:
 N_overlap  = round(overlap*NSTFT);        % Overlap sample length
 N          = length(xn); % length of total array
 

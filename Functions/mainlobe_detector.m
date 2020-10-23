@@ -1,4 +1,17 @@
 function [mainlobe,mainlobe_ang_freq] = mainlobe_detector(Xn,w)
+% [mainlobe,mainlobe_ang_freq] = mainlobe_detector(Xn,w)
+% Inputs:
+% Xn   = function wanting to find mainlobe
+% w    = freq/angular_freq array
+% Outputs:
+% mainlobe = detected mainlobe
+% mainlobe_ang_freq = mainlobes angular frequency
+% Info:
+% By: Matthew Luu
+% Last Edit: 5/17/2020
+% This finds the mainlobe of a function with sidelobes and such
+
+% Begin Code:
 idx = 1:length(Xn);
     isMin = islocalmin(Xn);
     b = 1;

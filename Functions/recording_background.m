@@ -1,4 +1,17 @@
 function [x_playback,Gxx] = recording_background(fs,quantize,time_rec)
+% [x_playback,Gxx] = recording_background(fs,quantize,time_rec)
+% Inputs:
+% fs = sampling rate
+% quantize = quantization rate for signal
+% time_rec = how long the time needs to be recorded
+% Outputs: 
+% x_playback = recorded signal
+% Gxx = Gxx signal for x playback
+% Info:
+% By: Matthew Luu
+% Last Edit: 10/1/2020
+% records the background noise or signal through computer audio system
+
     recObj = audiorecorder(fs,quantize,1);
     disp('Recording Begins');
     recordblocking(recObj,time_rec);

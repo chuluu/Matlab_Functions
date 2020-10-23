@@ -7,6 +7,11 @@ function CW = CW_pulse(f0,T_duration,T_toal_pulse,fs)
 % fs = sampling rate
 % Outputs:
 % CW = pulse created
+% Info:
+% By: Matthew Luu 
+% Last edit: 10/20/2020
+% CW pulse for being on, then off
+ 
 
 % Begin Code:
     dt     = 1/fs;

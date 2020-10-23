@@ -10,8 +10,13 @@ function [X,f] = MyFFT(x,Fs,shift,n)
 % the "middle".
 % f     Array of continuous-time frequencies corresponding to each
 % component of W.
-N = length(x);      % Normalize by sample length.
+% Info:
+% By: Matthew Luu
+% Last Edit: 10/22/2020
+% Finds linear spectrum of function and the freq array
 
+% Begin Code
+N = length(x);      % Normalize by sample length.
 
 % used to ignore arguements for fft shift and zero pad
 if nargin < 3

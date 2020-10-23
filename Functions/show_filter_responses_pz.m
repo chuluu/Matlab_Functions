@@ -1,4 +1,25 @@
 function [Ak,Bk,HF,Fd,hn,n,max_val] = show_filter_responses_pz(poles,zeros,K,fsample,num_of_f_points, num_of_n_points,figure_num)
+% [Ak,Bk,HF,Fd,hn,n,max_val] = show_filter_responses_pz(poles,zeros,K,fsample,num_of_f_points, num_of_n_points,figure_num)
+% Inputs:
+% poles: solution to Ak z function
+% zeros: solution to Bk z function
+% fsample: sampling rate
+% num_of_f_points: Number of frequency points
+% num_of_n_points: Number of time domain points
+% figure_num: Figure number for plots starting
+% Outputs:
+% Ak: Numerator coefficients of Z transform function
+% Bk: Denomentator coeffficeints of Z transform function
+% HF: Transfer function freq domain
+% Fd: Digital frequency
+% hn: Impulse response (unit sample response)
+% n:  digital time array n samples
+% Info:
+% By: Matthew Luu
+% Last edit: 3/17/2019
+% This code will take Ak, Bk, sampling rate, number of frequency points,
+% number of unit sample response points and figure number 
+% to output the poles, zeros, Transfer function, Frequency, unit sample response, unit and sample index
 % This code will take poles, zeros, sampling rate, number of frequency points,
 % number of unit sample response points and figure number 
 % to output the Ak, Bk coefficients, Transfer function, Frequency, unit sample response, unit and sample index

@@ -8,7 +8,11 @@ function processed_wav = equalize_and_reverb(inwavfilename, EQdBsettings, Dk_del
 %outwavfilename = name of new output wavefile after processesing
 %Outputs:
 %processed_wav = the impulse response of the echo 
+% Info:
+% By: Matthew Luu 
+% Last edit: 3/17/2019
  
+% Begin Code:
 [y, fs] = audioread(inwavfilename);
 freqs = [62.5, 125, 250, 500, 1e3, 2e3, 4e3, 8e3, 16e3] / fs;
 

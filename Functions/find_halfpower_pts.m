@@ -1,4 +1,16 @@
 function [w1,w2] = find_halfpower_pts(mainlobe,w)
+% [w1,w2] = find_halfpower_pts(mainlobe,w)
+% Inputs: 
+% mainlobe = function needing to be found
+% w        = frequency array (or angular)
+% Outputs: 
+% w1       = point lower frequency (or angular)
+% w2       = point higher frequency (or angular)
+% Info:
+% By: Matthew Luu 
+% Last edit: 10/20/2020
+% find half power points of a transfer function
+
     [mainlobe_Max_Val,mainlobe_Max_Idx] = max(mainlobe);
     mainlobe_w_1 = w(1:mainlobe_Max_Idx);
     mainlobe_w_2 = w(mainlobe_Max_Idx:end);

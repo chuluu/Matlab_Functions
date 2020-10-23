@@ -6,7 +6,12 @@ function [echo_filter_hn] = echo_filter(Dk_delays_msec,alphak_gains,fs)
 %fs = sampling rate
 %Outputs:
 %echo_filter_hn = the impulse response of the echo 
+% Info:
+% By: Matthew Luu 
+% Last edit: 3/17/2019
+ 
 
+%Begin Code
 D = round(Dk_delays_msec*10^-3.*fs);
 hn = [zeros(1,D(1)),alphak_gains(1)];
 

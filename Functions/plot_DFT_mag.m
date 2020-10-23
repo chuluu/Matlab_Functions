@@ -1,19 +1,22 @@
 function [X,F] = plot_DFT_mag(x,fs,figure_num)
+% [X,F] = plot_DFT_mag(x,fs,figure_num)
 % INPUTS:
 % x:    Data array.
 % fs:   Sampling Rate (Hz).
 % figure_num   to define the figure
-
 % OUTPUTS:
 % X:    Shifted and normalized FT of w.  Complex.  DC component located in
 % the "middle".
 % f:    Array of continuous-time frequencies corresponding to each
 % component of W.
+% Figure Plots
+% subplot(1): Digital Responses of signal input
+% Subplot(2): Analog Response using fft shift to have negative and positive
+% analog frequency
+% Info:
+% By: Matthew Luu
+% Last Edit: 1/19/2019
 
-%Figure Plots
-%subplot(1): Digital Responses of signal input
-%Subplot(2): Analog Response using fft shift to have negative and positive
-%analog frequency
 
 
 %Supplemental help provided by Clay McKell

@@ -1,5 +1,15 @@
 %% Perform FFT Using Matrix Multiplication (Still brute Force Method but faster than loops)function FFT_Result = weakfft(data)
 function FFT_Result = weakfft(data)
+% FFT_Result = weakfft(data)
+% Inputs:
+% data: data to be fft'd
+% Outputs:
+% FFT_Result: result of fft from the data
+% Info:
+% By: Matthew Luu
+% Last Edit: 11/19/2018
+% slower fft that I built from splitting, pretty much the DFT actually
+
 data_length = length(data);
 N_sum_pow2 = nextpow2(data_length);
 N_sum_pow2 = 2.^N_sum_pow2;

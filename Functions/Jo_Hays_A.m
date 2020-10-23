@@ -19,7 +19,11 @@ function [Gxx_array,dB_vals,t_array_big,f_array_big] = ...
 % dB_vals     = dB_vals of Gxx_array
 % t_array_big = time array for spectrogram
 % f_array_big = frequency array for spectrogram 
+% Info:
+% By: Matthew Luu
+% Last Edit: 10/9/2020
 
+% Begin Code:
     xn_PA = WU_to_PA(wav_input);
     if choose == 1
         [Gxx_array,dB_vals,t_array_big,f_array_big] = ...

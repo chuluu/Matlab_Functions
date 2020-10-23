@@ -1,4 +1,14 @@
 function [rn,t] = fftcorrnorm(xn, yn, Fs)
+% rn = fftcorr(xn, yn)
+%Inputs:
+%x:    Data Array of first time domain signal
+%h:    Data Array of second time domain signal
+%Outputs:
+%rn:    Correlated time domain signal
+% Info:
+% By: Matthew Luu, and 419 Partners
+% Last edit: 3/17/2019
+% Correlates 2 signals together using FFT algorithm and normalize
 
 rxx = fftcorr(xn, xn);
 ryy = fftcorr(yn, yn);

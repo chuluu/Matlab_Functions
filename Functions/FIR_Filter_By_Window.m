@@ -1,9 +1,15 @@
 function hn_lp = FIR_Filter_By_Window(M,Fc,window) 
+% Inputs:
 % M = the filter length (odd)
 % Fc = filter cutoff digital frequency (-6dB) (cycles/sample)
 % window = the Matlab window function values to multiply h[n] by
+% Outputs:
 % hn_lp = windowed impulse response values for the Low-pass FIR filter
-
+% Info:
+% By: Matthew Luu
+% Last Edit: 3/19/2019
+% FIR filter design by windowing
+% Windows:
 % rectwin( ) - Rectangular window.
 % triang( ) - Triangular window.
 % bartlett( ) - Bartlett window (Triangle Window with ?0?s at both ends)

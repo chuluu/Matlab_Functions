@@ -1,6 +1,17 @@
 function [y,t] = MyFFTConv(x,h,fs)
+% [y,t] = MyFFTConv(x,h,fs)
+% Inputs:
+% x = signal 1 time array
+% h = signal 2 time array
+% Outputs:
+% y = convolved time array signal
+% t = time array for convolution
+% Info:
+% By: Matthew Luu
+% Last Edit: 5/17/2020
 % Convolvles 2 signals together using FFT algorithm
 
+% Begin Code:
 %Set up length of FFT to zero pad such that we get an even signal
 %throughout
 N_x = length(x); 

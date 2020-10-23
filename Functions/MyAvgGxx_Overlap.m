@@ -1,4 +1,5 @@
 function [Gxx_avg,f_Gxx] = MyAvgGxx_Overlap(xn,NSTFT,overlap,fs)
+% [Gxx_avg,f_Gxx] = MyAvgGxx_Overlap(xn,NSTFT,overlap,fs)
 % Inputs:
 % xn         = Input Vector Time Array
 % NSTFT      = Length of each record desired
@@ -7,7 +8,11 @@ function [Gxx_avg,f_Gxx] = MyAvgGxx_Overlap(xn,NSTFT,overlap,fs)
 % Outputs:
 % Gxx_Avg    = Average Gxx from the operation
 % f_Gxx      = Frequency of the Gxx average
+% By: Matthew Luu
+% Last Edit: 9/20/2020
+% Finds average Gxx of signal given number of samples in each rec
 
+% Begin Code:
 N_overlap  = round(overlap*NSTFT);        % Overlap sample length
 N          = length(xn); % length of total array
 

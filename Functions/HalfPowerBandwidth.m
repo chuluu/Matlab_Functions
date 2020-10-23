@@ -1,8 +1,15 @@
 function Bandwidth = HalfPowerBandwidth(Xn,w)
-% Inputs
+% Inputs:
 % Xn = Input signal
 % w  = omega array
+% Outputs:
+% Bandwidth = bandwidth from array anetnna
+% Info:
+% By: Matthew Luu
+% Last Edit: 5/17/2020
+% I don't even know, but it's antenna's related from Cal Poly
 
+% Begin Code:
     idx = 1:length(Xn);
     isMin = islocalmin(Xn);
     b = 1;

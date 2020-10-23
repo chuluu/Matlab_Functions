@@ -1,13 +1,18 @@
 function [Gxx,Sxx,f_Sxx,f_Gxx] = MyPSDX(x,Fs)
-    % [Gxx,Sxx,f] = MyPSDX(x,Fs)
-    % Inputs:
-    % x  = signal
-    % Fs = Sampling Rate
-    % Outputs:
-    % Gxx   = Single Sided Power Spectral Density
-    % Sxx   = Double Sided Power Spectral Density (Parsevels)
-    % f_Sxx = Frequency Double Sided
-    % f_Gxx = Frequency Single Sided
+% [Gxx,Sxx,f] = MyPSDX(x,Fs)
+% Inputs:
+% x  = signal
+% Fs = Sampling Rate
+% Outputs:
+% Gxx   = Single Sided Power Spectral Density
+% Sxx   = Double Sided Power Spectral Density (Parsevels)
+% f_Sxx = Frequency Double Sided
+% f_Gxx = Frequency Single Sided
+% Info:
+% By: Matthew Luu
+% Last Edit: 10/22/2020
+
+% Begin Code:
     dt = 1/Fs;
     Xm = fft(x)*dt;
     N  = length(Xm);

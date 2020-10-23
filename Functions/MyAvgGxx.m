@@ -1,4 +1,5 @@
 function [Gxx_avg,f_Gxx] = MyAvgGxx(xn,fs,Nrecs)
+% [Gxx_avg,f_Gxx] = MyAvgGxx(xn,fs,Nrecs)
 % Inputs:
 % xn         = Input Vector Time Array
 % fs         = Sampling Rate
@@ -6,7 +7,12 @@ function [Gxx_avg,f_Gxx] = MyAvgGxx(xn,fs,Nrecs)
 % Outputs:
 % Gxx_Avg    = Average Gxx from the operation
 % f_Gxx      = Frequency of the Gxx average
+% Info:
+% By: Matthew Luu
+% Last Edit: 9/20/2020
+% Finds average Gxx of signal given number of records
 
+% Begin Code:
 N = length(xn);
 N_new = N/Nrecs;
 df = fs/N_new;

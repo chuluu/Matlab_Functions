@@ -1,13 +1,15 @@
 function [Cxy] = MyCrossCorCirc(xn, yn)
-% Convolvles 2 signals together using FFT algorithm
-%Inputs:
-%x:    Data Array of first time domain signal
-%h:    Data Array of second time domain signal
-%fs:   Sampling rate
-%Outputs:
-%Cxy:    Convolved time domain signal
-%t:    Time samples based off of sampling rate
+% [Cxy] = MyCrossCorCirc(xn, yn)
+% Inputs:
+% x:    Data Array of first time domain signal
+% yn:    Data Array of second time domain signal
+% Outputs:
+% Cxy:    Convolved time domain signal
+% By: Matthew Luu
+% Last Edit: 10/22/2020
+% Finds Cxy 2 signals using circular method
 
+% Begin Code:
 %Set up length of FFT to zero pad such that we get an even signal
 %throughout
 if xn > yn

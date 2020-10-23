@@ -1,14 +1,17 @@
 function [touch_tone,High_Freq,Low_Freq] = tone_detector_func(Tone_FFT,f)
-%This function Outputs the low and high frequencies for a touch tone pad
-%Inputs
-%Tone_FFT = Input the abs(FFT) for all frequencies from 0 - 0.5 Digital Freq
-%f        = ANALOG Frequency from 0 to whatever frequency
-
-%Outputs
-%touch_tone = the actual pad number value in a str on num form 
-%High_Freq  = the higher frequency value for one detection
-%Low_Freq   = the lower frequency value for the second detection
-
+% [touch_tone,High_Freq,Low_Freq] = tone_detector_func(Tone_FFT,f)
+% This function Outputs the low and high frequencies for a touch tone pad
+% Inputs
+% Tone_FFT = Input the abs(FFT) for all frequencies from 0 - 0.5 Digital Freq
+% f        = ANALOG Frequency from 0 to whatever frequency
+% Outputs
+% touch_tone = the actual pad number value in a str on num form 
+% High_Freq  = the higher frequency value for one detection
+% Low_Freq   = the lower frequency value for the second detection
+% Info:
+% By: Matthew Luu
+% Last edit: 3/18/2019
+% detects tones for EE 419, long ago
 
 % Lets Look For Low Frequencies!
 % Final point of 650

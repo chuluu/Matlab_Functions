@@ -6,6 +6,12 @@ function [pn,PN] = Pink_Noise_Generation(N,dt)
 % Outputs:
 % wn = Time Domain white noise
 % WN = Frequency Domain white noise
+% Info:
+% By: Matthew Luu
+% Last Edit: 9/17/2020
+% Pink Noise generation through freq domain into time domain
+
+
 % Magnitude Generation
     m = 0:1:N/2-1;
     Y_mag = 1./sqrt(m);

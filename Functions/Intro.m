@@ -1,4 +1,5 @@
 function Intro()
+% Intro script yo
 clc
 clear all
 clear variables

@@ -1,8 +1,16 @@
 function [mean_abs_error, mean_sq_error]=magnitude_response_error(HF,F,Fc)
 %function [mean_abs_error, mean_sq_error]=magnitude_response_error(HF,F,Fc)
+%   Inputs: 
 %   HF = the complex DTFT frequency response values (linear scale)
 %   Fd = digital frequencies that match the freq response values
 %   Fc = filter cutoff frequency (6dB)
+%   Outputs:
+%   mean_abs_error = error from desired
+%   mean_sq_error  = mean square error from desired
+%   Info:
+%   By: Pilkington (I think)
+%   Last edit: ???
+%   I don't know it's EE419 CP stuff
 
 % Start with All zeros for ideal HidealF;
 HidealF=zeros(size(HF));

@@ -1,9 +1,17 @@
 function rn = fftcorr(xn, yn)
-%FFTCORR Fast cross correlation using fft
-% Arguments:
-% xn - first signal
-% yn - second signal
+% rn = fftcorr(xn, yn)
+%Inputs:
+%x:    Data Array of first time domain signal
+%h:    Data Array of second time domain signal
+%Outputs:
+%rn:    Correlated time domain signal
+% Info:
+% By: Matthew Luu, and 419 Partners
+% Last edit: 3/17/2019
+% One way for fftconv
+% Correlates 2 signals together using FFT algorithm
 
+% Begin Code:
 Mx = length(xn);
 My = length(yn);
 M = Mx + My;

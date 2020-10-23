@@ -1,5 +1,18 @@
-%% FFT Function NEED To learn how recurssion really works
 function [FFT_Result,f] = SuperFFT(data,Fs)
+% [FFT_Result,f] = SuperFFT(data,Fs)
+% Inputs: 
+% data = data array to b fft'd
+% Fs   = sampling rate
+% Outputs:
+% FFT_Result = result of the FFT
+% f          = frequency Vector
+% Info:
+% By: Matthew Luu
+% Last Edit: 11/17/18
+% This function will take fft of time series using the cooley-tukey method
+% of recurssion 
+% FFT Function NEED To learn how recurssion really works
+
 %data manipulation to be correct lengths
 data_length = length(data);
 N_sum_pow2 = nextpow2(data_length);

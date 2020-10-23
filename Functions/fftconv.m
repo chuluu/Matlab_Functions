@@ -1,19 +1,23 @@
 function [y,Y,t] = fftconv(x,h,fs,figure_num)
+% [y,Y,t] = fftconv(x,h,fs,figure_num)
 % Convolvles 2 signals together using FFT algorithm
 %Inputs:
 %x:    Data Array of first time domain signal
 %h:    Data Array of second time domain signal
 %fs:   Sampling rate
 %figure_num:   label figures generated
-
 %Outputs:
 %y:    Convolved time domain signal
 %t:    Time samples based off of sampling rate
-
 %Figure Outputs:
 %figure_num: time domain plots of x,h, and y
 %figure_num + 1:  Digital Frequency Spectrum of X, H, and Y
 %figure_num + 2:  Analog frequency Spectrum of X, H, and Y
+% Info:
+% By: Matthew Luu, and 419 Partners
+% Last edit: 3/17/2019
+% One way for fftconv
+
 
 %Set up length of FFT to zero pad such that we get an even signal
 %throughout

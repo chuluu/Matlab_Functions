@@ -1,4 +1,16 @@
 function [Fundamental_Frequency, xcorr_1, time_period] = MATLAB_CrossCor(x,fs)
+% [mainlobe,mainlobe_ang_freq] = mainlobe_detector(Xn,w)
+% Inputs:
+% X    = cross corr function
+% fs    = sampling rate
+% Outputs:
+% Fundamental_Frequency = the fundy freq of foiurier series
+% xcorr_1 = xcorr result
+% time_period = time shift 
+% Info:
+% By: Matthew Luu
+% Last Edit: 1/17/2019
+% find fundamentalf req of a signal
 
 [xcorr_1,lag] = xcorr(x,x); %lag delay between two signals and maximums
 time_period = lag.*(1/fs);

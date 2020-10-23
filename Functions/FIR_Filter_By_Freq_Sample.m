@@ -1,10 +1,19 @@
 function [hn, HF, F] = FIR_Filter_By_Freq_Sample(HF_mag_samples, figurenum)
+% [hn, HF, F] = FIR_Filter_By_Freq_Sample(HF_mag_samples, figurenum)
+% Inputs:
+% HF_mag_samples = H[k] Magnitude response samples for desired filter
+% figurenum      = Figure # to plot frequency responses
+% Outputs:
 % hn - impulse response of filter (same length as HF_mag_samples)
 % HF - complex frequency response of filter
 % (estimated H(F) values found by FFT or freqz)
 % F ? digital frequency values corresponding to the estimated H(F)values
-% HF_mag_samples ? H[k] Magnitude response samples for desired filter
-% figurenum - Figure # to plot frequency responses
+% Info: 
+% By: EE419 partners
+% Last Edit: 3/19/19
+% Create filter by freq sample method
+
+% Begin Code:
     M  = length(HF_mag_samples);
     dF = 1/M;
     F  = 0:dF:(M-1)/M;

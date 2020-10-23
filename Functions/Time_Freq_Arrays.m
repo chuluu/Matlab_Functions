@@ -8,7 +8,12 @@ function [dt,df,t,freq] = Time_Freq_Arrays(fs,N)
 % df   = frequency difference
 % t    = time array
 % freq = frequency array
+% Info:
+% By: Matthew Luu
+% Last edit: 10/18/20
+% Time and frequency arrays by using fs and N pts
 
+% Begin Code:
 df = fs/N;
 dt = 1/fs;
 
