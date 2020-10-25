@@ -32,7 +32,7 @@ function Idx = find_val(fnc,val,del_start,iteration_val)
             [~,Soln] = size(Idx);
             del_change = iteration_val*a; % Change the del
             a = a+1;
-            if a >100000
+            if a >10000
                 % Counter to abort if the solution is hung
                 flag = 0;
                 Soln = 0.000123123;
