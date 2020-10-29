@@ -21,9 +21,9 @@ function [w1,w2] = find_halfpower_pts(mainlobe,w)
     
    
     iteration_val = 0.001;
-    Idx1 = find_val(mainlobe_1,halfpower_pt,0.01,iteration_val);
+    Idx1 = MyGen.find_val(mainlobe_1,halfpower_pt,0.01,iteration_val);
     iteration_val = 0.001;
-    Idx2 = find_val(mainlobe_2,halfpower_pt,0.01,iteration_val);
+    Idx2 = MyGen.find_val(mainlobe_2,halfpower_pt,0.01,iteration_val);
 
     if (isempty(Idx1))
         w2 = mainlobe_w_2(Idx2(1));

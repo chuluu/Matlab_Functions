@@ -22,12 +22,12 @@ function [x_playback,Gxx] = recording_background(fs,quantize,time_rec)
     t  = (0:1:N-1).*dt;
     subplot(2,1,1);
     plot(t,x_playback);
-    title_plots('Recording Playback','Time (s)','Amplitude (Pa)',14)
+    MyGen.title_plots('Recording Playback','Time (s)','Amplitude (Pa)',14)
 
-    [Gxx,Sxx,f_Sxx,f_Gxx] = MyPSDX(x_playback,fs);
+    [Gxx,Sxx,f_Sxx,f_Gxx] = MyDSP.MyPSDX(x_playback,fs);
     
     subplot(2,1,2); 
     semilogy(f_Gxx,Gxx,'b','Linewidth',1.5);
-    title_plots('Recording Playback Gxx','Freq (Hz)','Intensity (Pa^2/Hz)',14)
+    MyGen.title_plots('Recording Playback Gxx','Freq (Hz)','Intensity (Pa^2/Hz)',14)
     xlim([0 max(f_Gxx)]);
 end

@@ -29,7 +29,7 @@ x_root = [];
 % Loop to find all solutions
     for a = 1:N
         % Find when function hits 0 using iterative finding close to 0
-        Idx = find_val(y,0,initial_del,del_step);
+        Idx = MyGen.find_val(y,0,initial_del,del_step);
         
         % Check when done with all solutions
         [m,n] = size(Idx);
