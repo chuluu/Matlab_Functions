@@ -17,7 +17,7 @@ function [numz, denz] = bilinear_xform(nums, dens, fs)
     % This bilinear transformation produces results equivalent to the MatLab
     % Signal-Processing-Toolbox routine 'bilinear' when that routine is used
     % in the transfer function mode. However, bilinear_xform does not first
-    convert
+    % convert
     % to state-space as does 'bilinear'; this routine uses the more conventional
     % (though perhaps less efficient) direct transformation.
     %
@@ -66,7 +66,7 @@ function [numz, denz] = bilinear_xform(nums, dens, fs)
     % The key to understanding the code below is that, after the substitution
     % of (2*fs)*(1 - z^-1)/(1 + z^-1) for s and the subsequent multiplication
     % by (1 + z^-1)^m, every term has the form of ((1 + z^-1)^ma)*((1 - z^-
-    1)^mb)
+    % 1)^mb)
     % where ma+mb = m. So the roots of the resulting polynomial (for that
     % particular term) are ma negative ones and mb positive ones.
     %
@@ -91,9 +91,9 @@ function [numz, denz] = bilinear_xform(nums, dens, fs)
     for ii=1:mm
      basepoly = poly(rootv)*fsfact;
      numz = numz + basepoly*nums(mm-ii+1); % (nums values stored in opposite
-    order)
+    %order)
      denz = denz + basepoly*dens(mm-ii+1); % (dens values stored in opposite
-    order)
+    %order)
     % Modify fsfact and rootv except on final pass through loop
     if ii<mm
      fsfact = fsfact*2*fs;
