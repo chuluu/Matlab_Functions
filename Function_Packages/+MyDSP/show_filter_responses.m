@@ -35,10 +35,10 @@ title('PZ Map'); xlabel('Real'); ylabel('Imag');
 [HF, W] = freqz(Bk, Ak, num_of_f_points);
 
 Fd = W./(2.*pi);
-plot_freq_responses(Fd, HF, fsample, figure_num+1)
+MyDSP.plot_freq_responses(Fd, HF, fsample, figure_num+1)
 
 %% hn
-[hn, n] = unit_sample_response(Bk, Ak, num_of_n_points, figure_num+3);
+[hn, n] = MyDSP.unit_sample_response(Bk, Ak, num_of_n_points, figure_num+3);
 
 %% Peak Response
 HF_mag = abs(HF);

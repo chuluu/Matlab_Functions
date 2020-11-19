@@ -19,11 +19,10 @@ function [w1,w2] = find_halfpower_pts(mainlobe,w)
     mainlobe_2   = mainlobe(mainlobe_Max_Idx:end);
     halfpower_pt = mainlobe_Max_Val/sqrt(2);
     
-   
-    iteration_val = 0.001;
-    Idx1 = MyGen.find_val(mainlobe_1,halfpower_pt,0.01,iteration_val);
-    iteration_val = 0.001;
-    Idx2 = MyGen.find_val(mainlobe_2,halfpower_pt,0.01,iteration_val);
+    initial_del = (w(5)-w(4))*100;
+    del_step   = (w(5)-w(4))*10;
+    Idx1 = MyGen.find_val(mainlobe_1,halfpower_pt,initial_del,del_step);
+    Idx2 = MyGen.find_val(mainlobe_2,halfpower_pt,initial_del,del_step);
 
     if (isempty(Idx1))
         w2 = mainlobe_w_2(Idx2(1));

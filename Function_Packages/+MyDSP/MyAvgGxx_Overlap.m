@@ -43,12 +43,12 @@ window = window/sqrt(ms);
 
 % Begin B&B
 xn_array(1,:) = xn(1:NSTFT);
-[Gxx,Sxx,f_Sxx,f_Gxx] = MyPSDX(xn_array(1,:),fs);
+[Gxx,Sxx,f_Sxx,f_Gxx] = MyDSP.MyPSDX(xn_array(1,:),fs);
 Gxx_array(1,:) = Gxx;
 for a = 2:NS
     SC  = (NSTFT-N_overlap)*(a-1);
     xn_array(a,:) = xn(1+SC:NSTFT+SC).*window;
-    [Gxx,Sxx,f_Sxx,f_Gxx] = MyPSDX(xn_array(a,:),fs);
+    [Gxx,Sxx,f_Sxx,f_Gxx] = MyDSP.MyPSDX(xn_array(a,:),fs);
     Gxx_array(a,:) = Gxx;
 end
 

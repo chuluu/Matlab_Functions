@@ -14,7 +14,7 @@ function [hn, n]= unit_sample_response(Bk, Ak, num_samples, figure_num)
 % functions with dots. 
 
 % Begin Code:
-[dn ,n] = unit_sample(num_samples);
+[dn ,n] = MyDSP.unit_sample(num_samples);
 hn = filter(Bk, Ak, dn);
 figure(figure_num); stem(n,hn,'.','Linewidth',2);
 title('Unit Sample Response'); xlabel('Index'); ylabel('Magnitude');
