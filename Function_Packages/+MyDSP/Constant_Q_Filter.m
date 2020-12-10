@@ -1,4 +1,5 @@
 function [bb, aa] = Constant_Q_Filter(Q, f0, fs, fig_num, limiter, N)
+% [bb, aa] = Constant_Q_Filter(Q, f0, fs, fig_num, limiter, N)
 % Inputs:
 % Q  = Quality factor of Q = f0/HPBW
 % f0 = Center Frequency

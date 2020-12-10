@@ -22,7 +22,7 @@ function plot_filter_simple_Ak_BK(aa,bb,N,fs,fig_num,limiter)
     [dn, ~] = MyDSP.unit_sample(N,'n');
     h = filter(bb,aa,dn);
     [H,f] = MyDSP.MyFFT(h,fs,'n',0);
-    subplot(2,1,1); plot(f(1:end/2),abs(H(1:end/2)),'Linewidth',1.4);
+    subplot(2,1,1); plot(f(1:end/2),abs(H(1:end/2)),'Linewidth',1.4); hold on;
     title('Filter Magnitude Response','Fontsize',12);
     xlabel('Frequency (Hz)','Fontsize',12);
     ylabel('Magnitude (WU)','Fontsize',12);

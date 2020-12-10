@@ -1,5 +1,6 @@
 function [Gxx_array,dB_vals,t_array_big,f_array_big] = MYSpectrogram(...
     xn,NSTFT,overlap,fs,T)
+% [Gxx_array,dB_vals,t_array_big,f_array_big] = MYSpectrogram(xn,NSTFT,overlap,fs,T)
 % Inputs:
 % xn      = time array to analyze
 % NSTFT   = number of samples per record
@@ -76,7 +77,6 @@ dB_vals(dB_vals<-100) = -100;       % Suppress values
 % dB_vals = Gxx_array';
 
 % Plotting
-figure(2) % Call the spectrogram figure number 1
 imagesc(t_array_big, f_array_big, dB_vals);
 axis xy % This command forces the vertical axis to increase upward
 colormap(jet) % This command selects the color mapping for dBvalues
@@ -86,4 +86,5 @@ set(gca, 'fontsize', 14) % set font size for numbers on axes
 xlabel('Time [s]' , 'fontsize', 14)
 ylabel('Frequency [Hz]' , 'fontsize', 14) 
 ylim([0,max(f_array_big)*0.8]);
+
 end

@@ -16,7 +16,7 @@ function int_ans = Matrix_Integration(y,step)
     [row,col] = size(y);
     for a = 1:row
         for b = 1:col
-            int_ans(a,b) = Numerical_Trapazoid_Integration(y{a,b},step);
+            int_ans(a,b) = MyGen.Numerical_Trapazoid_Integration(y{a,b},step);
         end
     end
 end

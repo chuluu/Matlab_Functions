@@ -1,4 +1,5 @@
 function [bb, aa] = Exponential_Avg_Filter(Tc, fs, fig_num, limiter, N)
+% [bb, aa] = Exponential_Avg_Filter(Tc, fs, fig_num, limiter, N)
 % Inputs:
 % Tc = Time constant
 % fs = Sampling rate
