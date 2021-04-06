@@ -1,5 +1,5 @@
 function [H,P,Z,Hw] = Analog_TF_Analyzer(num,den,f,fig_num)
-% [H,P,Z,Hw] = Analog_TF_Analyzer(num,den,f)
+% [H,P,Z,Hw] = Analog_TF_Analyzer(num,den,f,fig_num)
     w   = 2*pi*f;
     H = tf(num,den);
     P = pole(H);

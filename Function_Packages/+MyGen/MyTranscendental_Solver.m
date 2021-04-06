@@ -1,5 +1,5 @@
 function x_root = MyTranscendental_Solver(x,y,range,initial_del,del_step)
-% x_root = MyTranscendental_Solver(x,y,range,N)
+% x_root = MyTranscendental_Solver(x,y,range,initial_del,del_step)
 % Inputs:
 % x     = x array of data the roots
 % y     = y array of data the function to be set == 0 
@@ -30,7 +30,9 @@ x_root = [];
     for a = 1:N
         % Find when function hits 0 using iterative finding close to 0
         Idx = MyGen.find_val(y,0,initial_del,del_step);
-        
+        if length(Idx) < 1
+            break;
+        end
         % Check when done with all solutions
         [m,n] = size(Idx);
         if n == 0
@@ -45,7 +47,7 @@ x_root = [];
             end
         else
             % If solution found put in an array
-            x_root(a,:) = x(Idx);
+            x_root(a,:) = x(Idx(1));
         end
 
         % break the old values

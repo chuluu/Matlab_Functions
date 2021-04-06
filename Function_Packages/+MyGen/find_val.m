@@ -15,9 +15,19 @@ function Idx = find_val(fnc,val,del_start,iteration_val)
 % Begin Code
 
 % initialize variables
+    if nargin < 3
+        del_start = 0.1;
+        iteration_val = 0.001;
+    end
+    
     del = del_start; 
+    [mn,~] = size(fnc);
+    if mn == 1
+        fnc = fnc.';
+    end
+    
     Idx = find(fnc < val + del & fnc > val - del);
-    [~,Soln] = size(Idx);
+    [Soln,~] = size(Idx);
     a = 1;
     del_change = 0;
     
@@ -29,13 +39,13 @@ function Idx = find_val(fnc,val,del_start,iteration_val)
         while (Soln > 2)
             del = del_start - del_change; % Tolerance factor val +/- del
             Idx = find(fnc < val + del & fnc > val - del); 
-            [~,Soln] = size(Idx);
+            [Soln,~] = size(Idx);
             del_change = iteration_val*a; % Change the del
             a = a+1;
-            if a >100000
+            if a > 100000
                 % Counter to abort if the solution is hung
                 flag = 0;
-                Soln = 0.000123123;
+                Soln = 1;
                 break;
             end
         end

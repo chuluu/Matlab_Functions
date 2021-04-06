@@ -1,4 +1,4 @@
-function plot_filter_simple_Ak_BK(aa,bb,N,fs,fig_num,limiter)
+function [H,f] = plot_filter_simple_Ak_BK(aa,bb,N,fs,fig_num,limiter)
 % Inputs:
 % aa = poles, denomenator coefficients
 % bb = zeros, numerator coefficients

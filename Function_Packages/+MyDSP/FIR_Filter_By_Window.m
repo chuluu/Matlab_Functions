@@ -34,4 +34,5 @@ h(n==0) = 2.*Fc;
 w = window;
 w = w';
 hn_lp = (h.*w);
+
 end

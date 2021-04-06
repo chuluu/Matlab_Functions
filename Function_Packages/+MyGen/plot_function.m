@@ -1,5 +1,5 @@
 function plot_function(x,y,Line_Color,Line_Width)
-% plot_function(x,y,head,x_lab,y_lab,Line_Color,FontSize,Line_Width)
+% plot_function(x,y,Line_Color,Line_Width)
 % Inputs:
 % x = x axis data
 % y = y axis data

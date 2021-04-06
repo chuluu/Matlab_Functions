@@ -23,7 +23,6 @@ function w_real = My_Mode_String_Solver(T,rho1,rho2,L,w,fig_num)
     % Apply function
     range = 100;
     w_real = MyGen.MyTranscendental_Solver(w,s,range);
-
     % syms w
     % s = c1*tan(((w/c1)*(L/2))) + c2*(tan((w/c2)*(L/2)));
     % soln = vpasolve(s==0,w)

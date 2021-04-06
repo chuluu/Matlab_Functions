@@ -1,5 +1,5 @@
 function integration_answer = Numerical_Trapazoid_Integration(y,step)
-% integration_answer = Numerical_Trapazoid_Integration(y)
+% integration_answer = Numerical_Trapazoid_Integration(y,step)
 % Inputs:
 % y = input function already computed with bounds and step already
 % step of x array

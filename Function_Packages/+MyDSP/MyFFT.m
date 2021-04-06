@@ -2,7 +2,7 @@ function [X,f] = MyFFT(x,Fs,shift,n)
 % [X,f] = MyFFT(x,Fs,n)
 % INPUTS:
 % x     Data array.
-% Fs    Sampling time (seconds).
+% Fs    Sampling rate (Hz).
 % shift fft shift applied or not, (default = yes)
 % n     zero pads, (degault = 0)
 % OUTPUTS:
@@ -33,7 +33,7 @@ if n == 0
 else
     X = fft(x,n)./Fs;
 end
-
+N = length(X);
 if shift == 'y'
     X = fftshift(X);    % Put DC in the middle.
     if rem(N,2) == 0
