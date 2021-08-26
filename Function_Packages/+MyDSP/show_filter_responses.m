@@ -59,7 +59,7 @@ min_val_dB_Freq = Fd(min_dB_index);
 attenuation = max_val_dB_val-min_val_dB_val;
 
 
-if abs(zeros) <= 1
+if abs(zeros(1)) <= 1
 %% 3 dB down point
     dB3_Val = max_val*0.707;
     db3 = max_val_dB - 3;

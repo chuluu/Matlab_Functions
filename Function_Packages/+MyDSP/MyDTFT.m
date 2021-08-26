@@ -11,7 +11,7 @@ function [X,F] = MyDTFT(x,n)
 % Last Edit: 11/19/2018
 
 % Begin Code:
-    F = linspace(-0.5,0.5,1e4);
+    F = linspace(-0.5,0.5,length(n));
     basis = exp(-1i*2*pi*(n)'*F); %' Transposes and it outer multiplies
     X = x*basis;
 end

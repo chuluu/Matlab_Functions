@@ -21,8 +21,11 @@ function [w1,w2] = find_halfpower_pts(mainlobe,w)
     
     initial_del = (w(5)-w(4))*0.01;
     del_step   = (w(5)-w(4))*0.01;
-    Idx1 = MyGen.find_val(mainlobe_1,halfpower_pt,initial_del,del_step);
-    Idx2 = MyGen.find_val(mainlobe_2,halfpower_pt,initial_del,del_step);
+%     Idx1 = MyGen.find_val(mainlobe_1,halfpower_pt,initial_del,del_step);
+%     Idx2 = MyGen.find_val(mainlobe_2,halfpower_pt,initial_del,del_step);
+
+    [~,Idx1] = MyGen.find_val_difference(mainlobe_1,halfpower_pt);
+    [~,Idx2] = MyGen.find_val_difference(mainlobe_2,halfpower_pt);
 
     if (isempty(Idx1))
         w2 = mainlobe_w_2(Idx2(round(end/2)));
