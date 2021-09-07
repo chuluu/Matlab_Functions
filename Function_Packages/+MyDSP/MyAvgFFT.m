@@ -1,4 +1,4 @@
-function [Gxx_avg,f_Gxx] = MyAvgGxx(xn,fs,Nrecs,win)
+function [Gxx_avg,f_Gxx] = MyAvgFFT(xn,fs,Nrecs,win)
 % [Gxx_avg,f_Gxx] = MyAvgGxx(xn,fs,Nrecs)
 % Inputs:
 % xn         = Input Vector Time Array
@@ -24,14 +24,9 @@ window = window/sqrt(ms);
 
 for a = 1:Nrecs
     xn_array(a,:) = xn(floor(1+(N_new*(a-1))):floor(N/Nrecs+(N_new*(a-1)))).*window;
-    [Gxx(a,:),Sxx,f,f_Gxx] = MyDSP.MyPSDX(xn_array(a,:),fs);
+    [Gxx(a,:),f_Gxx] = MyDSP.MyFFT(xn_array(a,:),fs,'n');
 end
 Gxx_avg = sum(Gxx,1)./Nrecs;
-RMS = sqrt(sum(Gxx_avg).*df);
-disp(['The RMS of signal: ', num2str(RMS)]);
-
-RMS = sqrt(max(Gxx_avg).*df);
-disp(['The RMS of sine wave single: ', num2str(RMS)]);
 
 end
 
